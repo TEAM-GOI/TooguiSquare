@@ -3,7 +3,7 @@ spring:
     hibernate:
       naming:
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         show_sql: true
@@ -27,8 +27,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ENC(bGvDWXdgAsFNCvvwrW9+eQ==)
     password: ENC(yb9c5bnqFBYAoXvuBddv6A==)
-    url: ENC(dQ96Wluz0a2arsvMkuMXVG1p5po7wjXXyjdaX10+HHUuF8FREb/+Tmux3QNaw6PoxJ2KtRnLdg8o0ZWc0oTjIsuyEMc3FH+KhLp08rKRFlDw2NCjInaTjF1zh/9pUQdreqb6qBGT+mg=)
+    url: ENC(m2u1QauptRPYaavOyEZltvqll4OT8FlsqNnylbGBtdRvFn78/MOFGvuck7byK/GMMYp05vrKyspMUo7/WkooskZv9wvXkckLi69LZTnz/NpsOvWyvYu1Nm3evyEXXyorzyAjeWphckQ=)
 
   mvc:
     path match:
       matching-strategy: ant_path_matcher
+
+jasypt:
+  key: ${JASYPT_KEY}
