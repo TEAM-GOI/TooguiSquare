@@ -1,0 +1,34 @@
+spring:
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: false
+        highlight_sql: false
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+    redis:
+      host: localhost
+      port: 6379
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ENC(bGvDWXdgAsFNCvvwrW9+eQ==)
+    password: ENC(yb9c5bnqFBYAoXvuBddv6A==)
+    url: ENC(dQ96Wluz0a2arsvMkuMXVG1p5po7wjXXyjdaX10+HHUuF8FREb/+Tmux3QNaw6PoxJ2KtRnLdg8o0ZWc0oTjIsuyEMc3FH+KhLp08rKRFlDw2NCjInaTjF1zh/9pUQdreqb6qBGT+mg=)
+
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
